@@ -58,16 +58,24 @@ MainActivity: 10
 表示成功啦！~
 
 
-## 生成Patch
+## 生成apatch
 
-官方没有给具体的实例，这里我提供一个debugkeystore的实例：
+官方没有给具体的实例，这里我提供一个实例：
 
-注意我的是MAC，2.apk是新的apk
+注意我的是MAC,所以是`.sh`文件，debugkeystore是AS自带的，2.apk是新的apk，1是旧的
 
 ```
 ./apkpatch.sh -f 2.apk -t 1.apk -k debug.keystore -p android -a androiddebugkey -e android -o patch
 ```
 
-执行完会在patch目录下生成补丁文件
+执行完会有如下日志输出，并且在patch目录下生成补丁文件
+
+```
+add modified Method:Ljava/lang/String;  a(Ljava/lang/String;)  in Class:Lme/yifeiyuan/andfixdemo/A;
+add new Method:Ljava/lang/String;  c()  in Class:Lme/yifeiyuan/andfixdemo/A;
+add modified Method:I  b(Ljava/lang/String;Ljava/lang/String;)  in Class:Lme/yifeiyuan/andfixdemo/A;
+```
+
+
 
 
