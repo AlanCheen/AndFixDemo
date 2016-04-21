@@ -42,7 +42,7 @@ public class A {
 //		Log.i("euler", o.s);
 //		return 0;
 //	}
-
+//
 	public int getI() {
 		return i;
 	}

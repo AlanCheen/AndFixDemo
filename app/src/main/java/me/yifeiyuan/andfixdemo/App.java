@@ -49,7 +49,7 @@ public class App extends Application {
         try {
             // .apatch file path
             String patchFileString = Environment.getExternalStorageDirectory()
-                    .getAbsolutePath() + APATCH_PATH;
+                    .getAbsolutePath() + APATCH_PATH;///storage/emulated/0/out.apatch
             mPatchManager.addPatch(patchFileString);
             Log.d(TAG, "apatch:" + patchFileString + " added.");
         } catch (IOException e) {
